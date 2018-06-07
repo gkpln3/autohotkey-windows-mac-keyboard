@@ -52,16 +52,16 @@ F19::Run https://facebook.com
 ; --------------------------------------------------------------
 
 ; Make Ctrl + S work with cmd (windows) key
-#s::^s
+#s::Send ^s
 
 ; Selecting
-#a::^a
+#a::Send ^a
 
 ; Copying
-#c::^c
+#c::Send ^c
 
 ; Pasting
-#v::^v
+#v::Send ^v
 
 ; Cutting
 #x::^x
@@ -93,6 +93,24 @@ Lwin & Tab::AltTab
 ; minimize windows
 #m::WinMinimize,a
 
+; go to start of line
+#Left::Send {Home}
+
+; go to end of line
+#Right::Send {End}
+
+; go to start of line
+#+Left::Send +{Home}
+
+; go to end of line
+#+Right::Send +{End}
+
+; alt arrows
+!Left::SendInput,^{Left}
+!Right::SendInput,^{Right}
+
+!+Left::SendInput,^+{Left}
+!+Right::SendInput,^+{Right}
 
 ; --------------------------------------------------------------
 ; OS X keyboard mappings for special chars
